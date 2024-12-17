@@ -51,3 +51,6 @@ class Relation(models.Model):
     term_of_payment = models.CharField(max_length=50)
     note = models.CharField(max_length=50)
     newsletters = models.BooleanField(max_length=50)
+
+    def __str__(self):
+        return self.company
