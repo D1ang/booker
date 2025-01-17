@@ -3,17 +3,9 @@ from relations.models import Relation
 from django.utils.translation import gettext_lazy as _
 
 
-"""
-ADD
-LIST
-KIND?
-"""
-
-
 class Status(models.Model):
     """
-    Quotation status with
-    colour labels.
+    Quotation status with colour labels.
     """
     description = models.CharField(max_length=20, verbose_name=_('description'))
     colour = models.CharField(max_length=10, default='Green', verbose_name=_('colour'))

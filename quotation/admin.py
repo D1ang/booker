@@ -17,7 +17,7 @@ class ProgressTypesAdmin(admin.ModelAdmin):
 class QuotationAdmin(admin.ModelAdmin):
     """
     """
-    list_display = ['quotation_number', 'date', 'expiration', 'status', ]
+    list_display = ['quotation_number', 'status', 'date', 'expiration', 'relation', ]   #nog toe te voegen aan overzicht: user, Totaal exlc BTW, TOTAAL inc BTW, gefactureerd
     # list_filter = ["status", "date"]
 
     pass
