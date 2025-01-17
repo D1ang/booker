@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'home',
     'relations',
     'quotation',
+    'invoice',
 ]
 
 MIDDLEWARE = [
