@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-18 22:04+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: invoice/models.py:14 quotation/models.py:10 quotation/models.py:21
+msgid "description"
+msgstr "omschrijving"
+
+#: invoice/models.py:17
+msgid "invoice text"
+msgstr ""
+
+#: invoice/models.py:22
+msgid "mutation description"
+msgstr ""
+
+#: main/settings.py:105
+msgid "Dutch"
+msgstr "Nederlands"
+
+#: quotation/models.py:11 quotation/models.py:22
+msgid "colour"
+msgstr "kleur"
+
+#: relations/admin.py:17
+msgid "Business address"
+msgstr "Vestigingsadres"
+
+#: relations/admin.py:23
+msgid "Post address"
+msgstr "Postadres"
+
+#: relations/admin.py:29
+msgid "Contact details"
+msgstr "Contactgegevens"
+
+#: relations/admin.py:35
+msgid "Payment details"
+msgstr "Betaalgegevens"
+
+#: relations/apps.py:8 relations/models.py:58
+msgid "relations"
+msgstr "relaties"
+
+#: relations/models.py:9
+msgid "Company"
+msgstr "Bedrijf"
+
+#: relations/models.py:10
+msgid "Relation"
+msgstr "Relatie"
+
+#: relations/models.py:14
+msgid "Male"
+msgstr "Man"
+
+#: relations/models.py:15
+msgid "Female"
+msgstr "Vrouw"
+
+#: relations/models.py:16
+msgid "Department"
+msgstr "Afdeling"
+
+#: relations/models.py:18
+msgid "relation type"
+msgstr "relatietype"
+
+#: relations/models.py:19
+msgid "code"
+msgstr "code"
+
+#: relations/models.py:20
+msgid "company"
+msgstr "bedrijf"
+
+#: relations/models.py:21
+msgid "company number"
+msgstr "kVK nummer"
+
+#: relations/models.py:22
+msgid "contact"
+msgstr "contactpersoon"
+
+#: relations/models.py:23
+msgid "gender"
+msgstr "geslacht"
+
+#: relations/models.py:24
+msgid "salutation"
+msgstr "aanhef"
+
+#: relations/models.py:27
+msgid "adress"
+msgstr "adres"
+
+#: relations/models.py:28
+msgid "postal"
+msgstr "postcode"
+
+#: relations/models.py:29
+msgid "city"
+msgstr "plaats"
+
+#: relations/models.py:30
+msgid "country"
+msgstr "land"
+
+#: relations/models.py:33
+msgid "post adress"
+msgstr "adres/postbus"
+
+#: relations/models.py:34
+msgid "post postal"
+msgstr "postcode"
+
+#: relations/models.py:35
+msgid "post city"
+msgstr "plaats"
+
+#: relations/models.py:36
+msgid "post country"
+msgstr "land"
+
+#: relations/models.py:39
+msgid "phone"
+msgstr "telefoon"
+
+#: relations/models.py:40
+msgid "mobile"
+msgstr "mobiel"
+
+#: relations/models.py:41
+msgid "mail"
+msgstr "e-mail"
+
+#: relations/models.py:42
+msgid "quotation mail"
+msgstr "facturen e-mail"
+
+#: relations/models.py:43
+msgid "reminders mail"
+msgstr "herinneringen e-mail"
+
+#: relations/models.py:44
+msgid "website"
+msgstr "website"
+
+#: relations/models.py:47
+msgid "iban"
+msgstr "iban"
+
+#: relations/models.py:48
+msgid "bic"
+msgstr "bic"
+
+#: relations/models.py:49
+msgid "btw"
+msgstr "btw"
+
+#: relations/models.py:50
+msgid "kind"
+msgstr "soort"
+
+#: relations/models.py:51
+msgid "general ledger"
+msgstr "standaard grootboek rekening"
+
+#: relations/models.py:52
+msgid "term of payment"
+msgstr "betalingstermijn"
+
+#: relations/models.py:53
+msgid "note"
+msgstr "notitie"
+
+#: relations/models.py:54
+msgid "newsletters"
+msgstr "nieuwsbrief"
+
+#: relations/models.py:57
+msgid "relation"
+msgstr "relatie"

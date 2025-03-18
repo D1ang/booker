@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.utils.translation import gettext_lazy as _
 from .models import Relation
 
 
@@ -13,25 +14,25 @@ class RelationAdmin(admin.ModelAdmin):
             }
         ),
         (
-            'Business address',
+            _('Business address'),
             {
                 'fields': ['adress', 'postal', 'city', 'country']
             }
         ),
         (
-            'Post address',
+            _('Post address'),
             {
                 'fields': ['post_adress', 'post_postal', 'post_city', 'post_country']
             }
         ),
         (
-            'Contact details',
+            _('Contact details'),
             {
                 'fields': ['phone', 'mobile', 'mail', 'quotation_mail', 'reminders_mail', 'website']
             }
         ),
         (
-            'Payment details',
+            _('Payment details'),
             {
                 'fields': ['iban', 'bic', 'btw', 'kind', 'general_ledger', 'term_of_payment', 'note', 'newsletters']
             }
