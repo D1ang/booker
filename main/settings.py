@@ -1,25 +1,24 @@
-import os
 from pathlib import Path
-
+from django.core.management.utils import get_random_secret_key
 from django.utils.translation import gettext_lazy as _
+import environ
+
+
+env = environ.FileAwareEnv(
+    # set casting, default values for env's
+    DEBUG=(bool, False),
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# take environment variables from .env file
+environ.Env.read_env(BASE_DIR / '.env')
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
+DEBUG = env('DEBUG')
+SECRET_KEY = env('SECRET_KEY', default=get_random_secret_key())
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-c^t7o7_xl3^qe+t!tvtncpl*_y20+fx4v06yb*n)zqceihd+dr'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -28,11 +27,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # custom build apps
     'home',
     'config',
-    'relations',
+    'relation',
     'quotation',
     'invoice',
 ]
@@ -53,7 +50,7 @@ ROOT_URLCONF = 'main.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -84,10 +81,10 @@ DATABASES = {
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator' },
-    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator' },
-    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator' },
-    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator' },
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
 
@@ -99,7 +96,7 @@ LANGUAGE_CODE = 'nl'
 USE_I18N = True
 USE_L10N = True
 
-LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
+LOCALE_PATHS = [BASE_DIR / 'locale']
 
 LANGUAGES = [
     ('en', ('English')),
@@ -114,6 +111,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
