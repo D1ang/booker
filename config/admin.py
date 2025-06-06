@@ -1,33 +1,25 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+from typing import ClassVar
+from .models import GeneralLedgerAccount, LedgerGroup
 
-from .models import GeneralLedgerAccount, Group
 
+@admin.register(LedgerGroup)
+class LedgerGroupAdmin(admin.ModelAdmin):
+    """Admin interface for the Ledger group model."""
 
-@admin.register(Group)
-class GroupAdmin(admin.ModelAdmin):
-    """Admin interface for the Group model."""
-
-    list_display = ['name']
-    search_fields = ['name']
+    list_display: ClassVar[list[str]] = ['group_name']
+    search_fields: ClassVar[list[str]] = ['group_name']
 
 
 @admin.register(GeneralLedgerAccount)
 class GeneralLedgerAccountAdmin(admin.ModelAdmin):
-    """Admin interface for the GeneralLedgerAccount model.
+    """Admin interface for the GeneralLedgerAccount model."""
 
-    Provides a customized view with filtered lists and search functionality
-    for managing general ledger accounts.
-    """
-
-    list_display = ['code', 'description', 'category', 'group', 'active']
-    list_filter = ['category', 'group', 'active']
-    search_fields = ['code', 'description']
+    list_display: ClassVar[list[str]] = ['code', 'description', 'category', 'group', 'active']
+    list_filter: ClassVar[list[str]] = ['category', 'group', 'active']
+    search_fields: ClassVar[list[str]] = ['code', 'description']
     fieldsets = (
-        (None, {
-            'fields': ('code', 'description', 'active'),
-        }),
-        (_('Classification'), {
-            'fields': ('category', 'group'),
-        }),
+        (None, {'fields': ('code', 'description', 'active')}),
+        (_('Classification'), {'fields': ('category', 'group')}),
     )
