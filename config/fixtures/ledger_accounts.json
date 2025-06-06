@@ -1,0 +1,497 @@
+[
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 1,
+    "fields": {
+      "code": "9999",
+      "description": "Verrekeningen",
+      "category": "balance",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 2,
+    "fields": {
+      "code": "9998",
+      "description": "Eindresultaat",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 3,
+    "fields": {
+      "code": "9997",
+      "description": "Memoriaal",
+      "category": "balance",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 4,
+    "fields": {
+      "code": "8010",
+      "description": "Omzet groep 2",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 5,
+    "fields": {
+      "code": "8003",
+      "description": "Site hosting",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 6,
+    "fields": {
+      "code": "8002",
+      "description": "Verkoop Extra pagina",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 7,
+    "fields": {
+      "code": "8001",
+      "description": "Verkoop Webdesign en webdevelopment pakket",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 8,
+    "fields": {
+      "code": "8000",
+      "description": "Omzet groep 1",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 9,
+    "fields": {
+      "code": "7000",
+      "description": "Inkopen",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 10,
+    "fields": {
+      "code": "4950",
+      "description": "Oninbare vorderingen",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 11,
+    "fields": {
+      "code": "4900",
+      "description": "Betalingsverschillen",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 12,
+    "fields": {
+      "code": "4860",
+      "description": "Vakliteratuur",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 13,
+    "fields": {
+      "code": "4850",
+      "description": "Cursussen/seminars",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 14,
+    "fields": {
+      "code": "4810",
+      "description": "Accountants- en administratiekosten",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 15,
+    "fields": {
+      "code": "4790",
+      "description": "Overige kantoorkosten",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 16,
+    "fields": {
+      "code": "4750",
+      "description": "Telefoon en internet",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 17,
+    "fields": {
+      "code": "4740",
+      "description": "Drukwerk, porti en vrachten",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 18,
+    "fields": {
+      "code": "4700",
+      "description": "Kantoorbenodigdheden",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 19,
+    "fields": {
+      "code": "4600",
+      "description": "Kilometervergoeding",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 20,
+    "fields": {
+      "code": "4590",
+      "description": "Overige verkoopkosten",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 21,
+    "fields": {
+      "code": "4550",
+      "description": "Bankkosten",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 22,
+    "fields": {
+      "code": "4540",
+      "description": "Relatiegeschenken",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 23,
+    "fields": {
+      "code": "4530",
+      "description": "Reis- en verblijfkosten",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 24,
+    "fields": {
+      "code": "4520",
+      "description": "Representatie en verteer",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 25,
+    "fields": {
+      "code": "4510",
+      "description": "Reclame en advertenties",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 26,
+    "fields": {
+      "code": "4500",
+      "description": "Contributies en abonnementen",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 27,
+    "fields": {
+      "code": "4340",
+      "description": "Afschr. Hardware",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 28,
+    "fields": {
+      "code": "4335",
+      "description": "Afschr. Inventarissen",
+      "category": "profit_loss",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 29,
+    "fields": {
+      "code": "2000",
+      "description": "Kruisposten",
+      "category": "balance",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 30,
+    "fields": {
+      "code": "1800",
+      "description": "Schulden (kortlopend)",
+      "category": "balance",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 31,
+    "fields": {
+      "code": "1700",
+      "description": "Crediteuren",
+      "category": "creditors",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 32,
+    "fields": {
+      "code": "1650",
+      "description": "Btw r/c",
+      "category": "balance",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 33,
+    "fields": {
+      "code": "1632",
+      "description": "Btw af te dragen overig",
+      "category": "balance",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 34,
+    "fields": {
+      "code": "1631",
+      "description": "Btw af te dragen laag",
+      "category": "balance",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 35,
+    "fields": {
+      "code": "1630",
+      "description": "Btw af te dragen hoog",
+      "category": "balance",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 36,
+    "fields": {
+      "code": "1600",
+      "description": "Voorbelasting",
+      "category": "balance",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 37,
+    "fields": {
+      "code": "1500",
+      "description": "Vorderingen (kortlopend)",
+      "category": "balance",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 38,
+    "fields": {
+      "code": "1410",
+      "description": "Privé-opnamen en stortingen",
+      "category": "balance",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 39,
+    "fields": {
+      "code": "1400",
+      "description": "Eigen Vermogen",
+      "category": "balance",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 40,
+    "fields": {
+      "code": "1300",
+      "description": "Debiteuren",
+      "category": "debtors",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 41,
+    "fields": {
+      "code": "1010",
+      "description": "Bank",
+      "category": "balance",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 42,
+    "fields": {
+      "code": "1000",
+      "description": "Kas",
+      "category": "balance",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 43,
+    "fields": {
+      "code": "0740",
+      "description": "Langlopende leningen",
+      "category": "balance",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 44,
+    "fields": {
+      "code": "0140",
+      "description": "Hardware",
+      "category": "balance",
+      "group": null,
+      "active": true
+    }
+  },
+  {
+    "model": "config.generalledgeraccount",
+    "pk": 45,
+    "fields": {
+      "code": "0130",
+      "description": "Inventarissen",
+      "category": "balance",
+      "group": null,
+      "active": true
+    }
+  }
+]

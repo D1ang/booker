@@ -1,0 +1,37 @@
+[
+    {
+        "model": "relations.relation",
+        "pk": 1,
+        "fields": {
+            "relation_type": "company",
+            "code": "001",
+            "company": "Aannemingsbedrijf Burggraaf",
+            "company_number": "30110608",
+            "contact": "Jan Burggraaf",
+            "gender": "male",
+            "salutation": "Dhr.",
+            "adress": "Souverein 1",
+            "postal": "3641 NR",
+            "city": "Mijdrecht",
+            "country": "Nederland",
+            "post_adress": "Souverein 1",
+            "post_postal": "3641 NR",
+            "post_city": "Mijdrecht",
+            "post_country": "Nederland",
+            "phone": "0297288764",
+            "mobile": "0611300682",
+            "mail": "info@burggraafaannemingsbedrijf.nl",
+            "quotation_mail": "info@burggraafaannemingsbedrijf.nl",
+            "reminders_mail": "info@burggraafaannemingsbedrijf.nl",
+            "website": "burggraafaannemingsbedrijf.nl",
+            "iban": "NL70RABO0195222547",
+            "bic": "RABONL2U",
+            "btw": "NL173231494B01",
+            "kind": "-",
+            "general_ledger": "-",
+            "term_of_payment": "14",
+            "note": "-",
+            "newsletters": false
+        }
+    }
+]

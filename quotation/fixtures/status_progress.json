@@ -1,0 +1,58 @@
+[
+    {
+        "model": "quotation.status",
+        "pk": 1,
+        "fields": {
+            "description": "Ingevoerd",
+            "colour": "Green"
+        }
+    },
+    {
+        "model": "quotation.status",
+        "pk": 2,
+        "fields": {
+            "description": "Verzonden",
+            "colour": "Green"
+        }
+    },
+    {
+        "model": "quotation.status",
+        "pk": 3,
+        "fields": {
+            "description": "Wacht op antwoord",
+            "colour": "Green"
+        }
+    },
+    {
+        "model": "quotation.status",
+        "pk": 4,
+        "fields": {
+            "description": "Geaccepteerd",
+            "colour": "Green"
+        }
+    },
+    {
+        "model": "quotation.status",
+        "pk": 5,
+        "fields": {
+            "description": "Gefactureerd",
+            "colour": "Green"
+        }
+    },
+    {
+        "model": "quotation.progress",
+        "pk": 1,
+        "fields": {
+            "description": "E-mail ontvangen",
+            "colour": "Green"
+        }
+    },
+    {
+        "model": "quotation.progress",
+        "pk": 2,
+        "fields": {
+            "description": "E-mail verzonden",
+            "colour": "Green"
+        }
+    }
+]
