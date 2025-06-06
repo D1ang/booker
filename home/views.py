@@ -1,15 +1,7 @@
 from django.shortcuts import render
-# from orders.models import Item
+from django.http import HttpRequest, HttpResponse
 
 
-def index(request):
-    """
-    A view that displays the index page and renders
-    the three most clicked services.
-    """
-    # items = Item.objects.all().order_by('-clicks')[:3]
-
-    # context = {'items': items}
-
-    # return render(request, 'home/index.html', context)
+def index(request: HttpRequest) -> HttpResponse:
+    """Display the index page."""
     return render(request, 'home/index.html')

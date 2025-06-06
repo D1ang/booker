@@ -43,6 +43,14 @@
         "model": "quotation.progress",
         "pk": 1,
         "fields": {
+            "description": "Ingevoerd",
+            "colour": "Geel"
+        }
+    },
+    {
+        "model": "quotation.progress",
+        "pk": 1,
+        "fields": {
             "description": "E-mail ontvangen",
             "colour": "Green"
         }
