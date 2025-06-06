@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-18 22:04+0100\n"
+"POT-Creation-Date: 2025-06-06 14:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,39 +18,194 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: invoice/models.py:14 quotation/models.py:10 quotation/models.py:21
+#: config/admin.py:30
+msgid "Classification"
+msgstr "Classificatie"
+
+#: config/models.py:11
+msgid "name"
+msgstr "naam"
+
+#: config/models.py:18 config/models.py:54
+msgid "group"
+msgstr "groep"
+
+#: config/models.py:19
+msgid "groups"
+msgstr "groepen"
+
+#: config/models.py:25
+msgid "Balance Sheet"
+msgstr "Balans"
+
+#: config/models.py:26
+msgid "Profit and Loss"
+msgstr "Winst en Verlies"
+
+#: config/models.py:27
+msgid "Payment Methods"
+msgstr "Betaalmiddelen"
+
+#: config/models.py:28
+msgid "Debtors"
+msgstr "Debiteuren"
+
+#: config/models.py:29
+msgid "Creditors"
+msgstr "Crediteuren"
+
+#: config/models.py:30
+msgid "Btw r/c"
+msgstr ""
+
+#: config/models.py:31
+msgid "Btw af te dragen overig"
+msgstr ""
+
+#: config/models.py:32
+msgid "Btw af te dragen laag"
+msgstr ""
+
+#: config/models.py:33
+msgid "Btw af te dragen hoog"
+msgstr ""
+
+#: config/models.py:34
+msgid "Voorbelasting"
+msgstr ""
+
+#: config/models.py:46 relations/models.py:19
+msgid "code"
+msgstr "code"
+
+#: config/models.py:47 invoice/models.py:15 quotation/models.py:9
+#: quotation/models.py:67
 msgid "description"
 msgstr "omschrijving"
 
-#: invoice/models.py:17
+#: config/models.py:49
+msgid "category"
+msgstr "categorie"
+
+#: config/models.py:58
+msgid "active"
+msgstr "actief"
+
+#: config/models.py:76
+#, python-format
+msgid "The category \"%(category)s\" can only be assigned to one account."
+msgstr ""
+"De categorie \"%(category)s\" kan alleen aan één account toegewezen worden."
+
+#: config/models.py:90
+msgid "General Ledger Account"
+msgstr "grootboekrekening"
+
+#: config/models.py:91
+msgid "General Ledger Accounts"
+msgstr "grootboekrekeningen"
+
+#: invoice/apps.py:8
+msgid "invoice"
+msgstr "factuur"
+
+#: invoice/models.py:18
 msgid "invoice text"
-msgstr ""
+msgstr "factuurtekst"
 
-#: invoice/models.py:22
+#: invoice/models.py:23
 msgid "mutation description"
-msgstr ""
+msgstr "mutatie omschrijving"
 
-#: main/settings.py:105
+#: main/settings.py:106
 msgid "Dutch"
 msgstr "Nederlands"
 
-#: quotation/models.py:11 quotation/models.py:22
+#: quotation/apps.py:8 quotation/models.py:47
+msgid "Quotation"
+msgstr "Offerte"
+
+#: quotation/models.py:10
 msgid "colour"
 msgstr "kleur"
 
-#: relations/admin.py:17
+#: quotation/models.py:14
+msgid "Label description"
+msgstr "Label omschrijving"
+
+#: quotation/models.py:24
+msgid "Status"
+msgstr "Status"
+
+#: quotation/models.py:25
+msgid "Statuses"
+msgstr "statussen"
+
+#: quotation/models.py:32
+msgid "Progress"
+msgstr "Voortgang"
+
+#: quotation/models.py:38
+msgid "quotation number"
+msgstr "Offerte nummer"
+
+#: quotation/models.py:39 relations/models.py:57
+msgid "relation"
+msgstr "relatie"
+
+#: quotation/models.py:40
+msgid "status"
+msgstr "status"
+
+#: quotation/models.py:41
+msgid "progress"
+msgstr "Voortgang"
+
+#: quotation/models.py:42
+msgid "date"
+msgstr "datum"
+
+#: quotation/models.py:43
+msgid "expiration"
+msgstr "vervaldatum"
+
+#: quotation/models.py:44 relations/models.py:53
+msgid "note"
+msgstr "notitie"
+
+#: quotation/models.py:65
+msgid "quotation rule"
+msgstr "offerte regel"
+
+#: quotation/models.py:66
+msgid "amount"
+msgstr "hoeveelheid"
+
+#: quotation/models.py:68
+msgid "price"
+msgstr "prijs"
+
+#: quotation/models.py:69
+msgid "VAT"
+msgstr "BTW"
+
+#: quotation/models.py:72
+msgid "Quotation rule"
+msgstr "Offerte regel"
+
+#: relations/admin.py:18
 msgid "Business address"
 msgstr "Vestigingsadres"
 
-#: relations/admin.py:23
+#: relations/admin.py:24
 msgid "Post address"
 msgstr "Postadres"
 
-#: relations/admin.py:29
+#: relations/admin.py:30
 msgid "Contact details"
 msgstr "Contactgegevens"
 
-#: relations/admin.py:35
+#: relations/admin.py:36
 msgid "Payment details"
 msgstr "Betaalgegevens"
 
@@ -82,10 +237,6 @@ msgstr "Afdeling"
 msgid "relation type"
 msgstr "relatietype"
 
-#: relations/models.py:19
-msgid "code"
-msgstr "code"
-
 #: relations/models.py:20
 msgid "company"
 msgstr "bedrijf"
@@ -95,8 +246,8 @@ msgid "company number"
 msgstr "kVK nummer"
 
 #: relations/models.py:22
-msgid "contact"
-msgstr "contactpersoon"
+msgid "particulier"
+msgstr "particulier"
 
 #: relations/models.py:23
 msgid "gender"
@@ -186,14 +337,9 @@ msgstr "standaard grootboek rekening"
 msgid "term of payment"
 msgstr "betalingstermijn"
 
-#: relations/models.py:53
-msgid "note"
-msgstr "notitie"
-
 #: relations/models.py:54
 msgid "newsletters"
 msgstr "nieuwsbrief"
 
-#: relations/models.py:57
-msgid "relation"
-msgstr "relatie"
+#~ msgid "note external"
+#~ msgstr "externe notitie"
