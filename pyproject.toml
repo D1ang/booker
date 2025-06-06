@@ -1,0 +1,11 @@
+[tool.ruff]
+line-length = 120
+select = ['ALL']
+exclude = ['migrations']
+ignore = ['D100', 'D101', 'D104', 'D105', 'D106', 'I001']
+
+[tool.ruff.format]
+quote-style = 'single'
+
+[tool.ruff.flake8-quotes]
+inline-quotes = 'single'
