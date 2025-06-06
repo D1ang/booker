@@ -3,8 +3,8 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Relation(models.Model):
-    """
-    """
+    """Model representing a business relation with various details."""
+
     RELATION = (
         ('company', _('Company')),
         ('relation', _('Relation')),
@@ -15,6 +15,7 @@ class Relation(models.Model):
         ('female', _('Female')),
         ('department', _('Department')),
     )
+
     relation_type = models.CharField(choices=RELATION, max_length=50, verbose_name=_('relation type'))
     code = models.CharField(max_length=50, verbose_name=_('code'))
     company = models.CharField(max_length=50, verbose_name=_('company'))
@@ -46,7 +47,7 @@ class Relation(models.Model):
     # payment details
     iban = models.CharField(max_length=50, verbose_name=_('iban'))
     bic = models.CharField(max_length=50, verbose_name=_('bic'))
-    btw = models.CharField(max_length=50, verbose_name=_('btw'))
+    vat = models.CharField(max_length=50, verbose_name=_('vat'))
     kind = models.CharField(max_length=50, verbose_name=_('kind'))
     general_ledger = models.CharField(max_length=50, verbose_name=_('general ledger'))
     term_of_payment = models.CharField(max_length=50, verbose_name=_('term of payment'))
@@ -54,8 +55,8 @@ class Relation(models.Model):
     newsletters = models.BooleanField(max_length=50, verbose_name=_('newsletters'))
 
     class Meta:
-        verbose_name = _('relation')
-        verbose_name_plural = _('relations')
+        verbose_name = _('Relation')
+        verbose_name_plural = _('Relations')
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.company

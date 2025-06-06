@@ -1,6 +1,6 @@
 [
     {
-        "model": "relations.relation",
+        "model": "relation.relation",
         "pk": 1,
         "fields": {
             "relation_type": "company",
@@ -26,7 +26,7 @@
             "website": "burggraafaannemingsbedrijf.nl",
             "iban": "NL70RABO0195222547",
             "bic": "RABONL2U",
-            "btw": "NL173231494B01",
+            "vat": "NL173231494B01",
             "kind": "-",
             "general_ledger": "-",
             "term_of_payment": "14",
