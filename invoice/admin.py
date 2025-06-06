@@ -1,11 +1,14 @@
 from django.contrib import admin
+from typing import ClassVar
 from .models import Invoice
 
 
+@admin.register(Invoice)
 class InvoiceAdmin(admin.ModelAdmin):
-    """
-    """
-    list_display = ['invoice_date', 'invoice_id', 'relation',]
+    """Admin configuration for managing Invoices in the admin interface."""
 
-
-admin.site.register(Invoice, InvoiceAdmin)
+    list_display: ClassVar[list[str]] = [
+        'invoice_date',
+        'invoice_id',
+        'relation',
+    ]

@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from relations.models import Relation
+from relation.models import Relation
 
 
 class LabelDescription(models.Model):

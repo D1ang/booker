@@ -49,7 +49,7 @@
     },
     {
         "model": "quotation.progress",
-        "pk": 1,
+        "pk": 2,
         "fields": {
             "description": "E-mail ontvangen",
             "colour": "Green"
@@ -57,7 +57,7 @@
     },
     {
         "model": "quotation.progress",
-        "pk": 2,
+        "pk": 3,
         "fields": {
             "description": "E-mail verzonden",
             "colour": "Green"
