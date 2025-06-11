@@ -2,6 +2,28 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 
+class TermOfPayment(models.Model):
+    """Model representing a term of payment for business relations."""
+
+    description = models.CharField(max_length=30, verbose_name=_('description'))
+    days = models.IntegerField(verbose_name=_('days'))
+    footer = models.TextField(max_length=250, verbose_name=_('footer'))
+    is_default = models.BooleanField(default=False, verbose_name=_('is default'))
+
+    class Meta:
+        verbose_name = _('Term of Payment')
+        verbose_name_plural = _('Terms of Payment')
+
+    def __str__(self) -> str:
+        return self.description
+
+    def save(self, *args: object, **kwargs: object) -> None:
+        """Set all other `is_default` to false if this one is set to true."""
+        if self.is_default:
+            TermOfPayment.objects.exclude(pk=self.pk).update(is_default=False)
+        super().save(*args, **kwargs)
+
+
 class Relation(models.Model):
     """Model representing a business relation with various details."""
 
@@ -17,7 +39,7 @@ class Relation(models.Model):
     )
 
     relation_type = models.CharField(choices=RELATION, max_length=50, verbose_name=_('relation type'))
-    code = models.CharField(max_length=50, verbose_name=_('code'))
+    code = models.CharField(max_length=50, primary_key=True, unique=True, verbose_name=_('code'))
     company = models.CharField(max_length=50, verbose_name=_('company'))
     company_number = models.CharField(max_length=50, verbose_name=_('company number'))
     contact = models.CharField(max_length=50, verbose_name=_('contact'))
@@ -50,7 +72,7 @@ class Relation(models.Model):
     vat = models.CharField(max_length=50, verbose_name=_('vat'))
     kind = models.CharField(max_length=50, verbose_name=_('kind'))
     general_ledger = models.CharField(max_length=50, verbose_name=_('general ledger'))
-    term_of_payment = models.CharField(max_length=50, verbose_name=_('term of payment'))
+    term_of_payment = models.ForeignKey(TermOfPayment, on_delete=models.CASCADE, verbose_name=_('term of payment'))
     note = models.CharField(max_length=50, verbose_name=_('note'))
     newsletters = models.BooleanField(max_length=50, verbose_name=_('newsletters'))
 

@@ -1,7 +1,16 @@
 from django.contrib import admin
-from django.forms import ModelForm
+from typing import ClassVar
 from django.utils.translation import gettext_lazy as _
-from .models import Relation
+from .models import TermOfPayment, Relation
+
+
+@admin.register(TermOfPayment)
+class TermOfPaymentAdmin(admin.ModelAdmin):
+    """Admin interface for managing terms of payment."""
+
+    list_display: ClassVar[list[str]] = ['description', 'days', 'is_default']
+    ordering: ClassVar[list[str]] = ['description']
+    fields: ClassVar[list[str]] = ['description', 'days', 'footer', 'is_default']
 
 
 @admin.register(Relation)
@@ -30,26 +39,3 @@ class RelationAdmin(admin.ModelAdmin):
             {'fields': ['iban', 'bic', 'vat', 'kind', 'general_ledger', 'term_of_payment', 'note', 'newsletters']},
         ),
     )
-
-    def get_form(self, request, obj=None, **kwargs) -> ModelForm:
-        """Return a customized form for the admin interface.
-
-        Parameters
-        ----------
-        request : HttpRequest
-            The current request object
-        obj : Model, optional
-            The object being edited, or None for new objects
-        **kwargs : dict
-            Additional keyword arguments
-
-        Returns
-        -------
-        ModelForm
-            The customized form with modified widget attributes
-
-        """
-        form = super().get_form(request, obj, **kwargs)
-        form.base_fields['relation_type'].widget.attrs['style'] = 'width: 21em;'
-        form.base_fields['gender'].widget.attrs['style'] = 'width: 21em;'
-        return form
