@@ -2,7 +2,15 @@
 line-length = 120
 select = ['ALL']
 exclude = ['migrations']
-ignore = ['D100', 'D101', 'D104', 'D105', 'D106', 'I001']
+ignore = [
+    'D100',
+    'D101',
+    'D104',
+    'D105',
+    'D106',
+    'I001',
+    'DTZ002'  # Timezones are handled by django
+]
 
 [tool.ruff.format]
 quote-style = 'single'

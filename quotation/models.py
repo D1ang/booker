@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from relation.models import Relation
+from datetime import datetime, timedelta, date
 
 
 class LabelDescription(models.Model):
@@ -33,6 +34,11 @@ class Progress(LabelDescription):
         verbose_name_plural = _('Progress')
 
 
+def get_expiration_date() -> datetime:
+    """Return a default expiration date for a quotation."""
+    return datetime.today() + timedelta(days=30)
+
+
 class Quotation(models.Model):
     """Quotation details connections with status and relations."""
 
@@ -40,8 +46,8 @@ class Quotation(models.Model):
     relation = models.ForeignKey(Relation, on_delete=models.CASCADE, verbose_name=_('relation'))
     status = models.ForeignKey(Status, null=False, blank=False, on_delete=models.CASCADE, verbose_name=_('status'))
     progress_type = models.ForeignKey(Progress, on_delete=models.CASCADE, verbose_name=_('progress'))
-    date = models.DateField(verbose_name=_('date'))
-    expiration = models.DateField(verbose_name=_('expiration'))
+    date = models.DateField(default=date.today, verbose_name=_('date'))
+    expiration = models.DateField(default=get_expiration_date, verbose_name=_('expiration'))
     note = models.CharField(max_length=250, blank=True, verbose_name=_('note'))
 
     class Meta:
@@ -52,12 +58,14 @@ class Quotation(models.Model):
 
     def save(self, *args: object, **kwargs: object) -> None:
         """Create a quotation number based on: `YYYY-OF-INT` when saved."""
-        if not self.quotation_number:
-            year = str(self.date)
-            prefix = f'{year[:4]}-OF-'
-
-            self.quotation_number = f'{prefix}{self.pk:04d}'
+        is_new = self.pk is None
         super().save(*args, **kwargs)
+
+        if is_new and not self.quotation_number:
+            year = str(self.date.year)
+            prefix = f'{year}-OF-'
+            self.quotation_number = f'{prefix}{self.pk:04d}'
+            super().save(update_fields=['quotation_number'])  # update on second save
 
 
 class QuotationRule(models.Model):
