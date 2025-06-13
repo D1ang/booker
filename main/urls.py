@@ -1,6 +1,10 @@
+from django.utils.translation import gettext_lazy as _
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.urls import path, include
+
+
+admin.site.site_header = _('Finny - Administration')
 
 
 urlpatterns = i18n_patterns(
