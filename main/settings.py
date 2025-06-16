@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'home',
     'config',
     'relation',
+    'items',
     'quotation',
     'invoice',
 ]
