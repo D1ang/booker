@@ -1,6 +1,6 @@
 from django.contrib import admin
-from django.utils.translation import gettext_lazy as _
 from typing import ClassVar
+from django.utils.translation import gettext_lazy as _
 from .models import GeneralLedgerAccount, LedgerGroup
 
 
@@ -19,7 +19,8 @@ class GeneralLedgerAccountAdmin(admin.ModelAdmin):
     list_display: ClassVar[list[str]] = ['code', 'description', 'category', 'group', 'active']
     list_filter: ClassVar[list[str]] = ['category', 'group', 'active']
     search_fields: ClassVar[list[str]] = ['code', 'description']
-    fieldsets = (
-        (None, {'fields': ('code', 'description', 'active')}),
-        (_('Classification'), {'fields': ('category', 'group')}),
-    )
+
+    fieldsets: ClassVar[list[tuple[str, dict]]] = [
+        (_('Account'), {'fields': ['code', 'description', 'active']}),
+        (_('Classification'), {'fields': ['category', 'group']}),
+    ]

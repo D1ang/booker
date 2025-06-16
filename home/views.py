@@ -1,8 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect
 from django.http import HttpRequest, HttpResponse
 
 
-def index(request: HttpRequest) -> HttpResponse:
+def index(_request: HttpRequest) -> HttpResponse:
     """Display the index page."""
-    # return render(request, 'home/index.html')
     return redirect('/admin')
