@@ -1,20 +1,16 @@
 from django.contrib import admin
 from typing import ClassVar
-from .models import Progress, Quotation, QuotationRule, Status
+from .models import QuotationStatus, QuotationProgress, Quotation, QuotationRule
 
 
-@admin.register(Status)
-class StatusAdmin(admin.ModelAdmin):
-    """Admin configuration for managing Statuses in the admin interface."""
-
-    list_display: ClassVar[list[str]] = ['description', 'colour']
+@admin.register(QuotationStatus)
+class QuotationStatusAdmin(admin.ModelAdmin):
+    list_display: ClassVar[list[str]] = ['label_description', 'label_colour']
 
 
-@admin.register(Progress)
-class ProgressAdmin(admin.ModelAdmin):
-    """Admin configuration for managing Progress in the admin interface."""
-
-    list_display: ClassVar[list[str]] = ['description', 'colour']
+@admin.register(QuotationProgress)
+class QuotationProgressAdmin(admin.ModelAdmin):
+    list_display: ClassVar[list[str]] = ['label_description', 'label_colour']
 
 
 class QuotationInline(admin.TabularInline):
@@ -24,16 +20,14 @@ class QuotationInline(admin.TabularInline):
 
 @admin.register(Quotation)
 class QuotationAdmin(admin.ModelAdmin):
-    """Admin configuration for managing Quotations in the admin interface."""
-
     list_display: ClassVar[list[str]] = [
-        'quotation_number',
-        'relation',
-        'date',
-        'expiration',
-        'progress_type',
-        'status',
+        'quote_number',
+        'customer',
+        'quote_date',
+        'quote_expiration',
+        'quote_progress',
+        'quote_status',
     ]
 
-    exclude: ClassVar[list[str]] = ['quotation_number']
+    exclude: ClassVar[list[str]] = ['quote_number']
     inlines: ClassVar[list] = [QuotationInline]

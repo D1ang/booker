@@ -24,7 +24,7 @@ def generate_quotation(request: HttpRequest) -> HttpResponse:
 
 def quotation_details(request, quotation_number):
     """Render the quotation details page."""
-    quotation = Quotation.objects.get(quotation_number=quotation_number)
+    quotation = Quotation.objects.get(quotate_number=quotate_number)
     quotation_rules = quotation.quotationrule_set.all()
 
 

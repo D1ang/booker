@@ -1,66 +1,66 @@
 [
     {
-        "model": "quotation.status",
+        "model": "quotation.quotationstatus",
         "pk": 1,
         "fields": {
-            "description": "Ingevoerd",
-            "colour": "Green"
+            "label_description": "Ingevoerd",
+            "label_colour": "Green"
         }
     },
     {
-        "model": "quotation.status",
+        "model": "quotation.quotationstatus",
         "pk": 2,
         "fields": {
-            "description": "Verzonden",
-            "colour": "Green"
+            "label_description": "Verzonden",
+            "label_colour": "Green"
         }
     },
     {
-        "model": "quotation.status",
+        "model": "quotation.quotationstatus",
         "pk": 3,
         "fields": {
-            "description": "Wacht op antwoord",
-            "colour": "Green"
+            "label_description": "Wacht op antwoord",
+            "label_colour": "Green"
         }
     },
     {
-        "model": "quotation.status",
+        "model": "quotation.quotationstatus",
         "pk": 4,
         "fields": {
-            "description": "Geaccepteerd",
-            "colour": "Green"
+            "label_description": "Geaccepteerd",
+            "label_colour": "Green"
         }
     },
     {
-        "model": "quotation.status",
+        "model": "quotation.quotationstatus",
         "pk": 5,
         "fields": {
-            "description": "Gefactureerd",
-            "colour": "Green"
+            "label_description": "Gefactureerd",
+            "label_colour": "Green"
         }
     },
     {
-        "model": "quotation.progress",
+        "model": "quotation.quotationprogress",
         "pk": 1,
         "fields": {
-            "description": "Ingevoerd",
-            "colour": "Geel"
+            "label_description": "Ingevoerd",
+            "label_colour": "Geel"
         }
     },
     {
-        "model": "quotation.progress",
+        "model": "quotation.quotationprogress",
         "pk": 2,
         "fields": {
-            "description": "E-mail ontvangen",
-            "colour": "Green"
+            "label_description": "E-mail ontvangen",
+            "label_colour": "Green"
         }
     },
     {
-        "model": "quotation.progress",
+        "model": "quotation.quotationprogress",
         "pk": 3,
         "fields": {
-            "description": "E-mail verzonden",
-            "colour": "Green"
+            "label_description": "E-mail verzonden",
+            "label_colour": "Green"
         }
     }
 ]

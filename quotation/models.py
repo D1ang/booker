@@ -1,60 +1,51 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from relation.models import Relation
+from product.models import ProductItem
 from datetime import datetime, timedelta, date
 
 
-class LabelDescription(models.Model):
-    """Abstract base model with description and colour fields."""
-
-    description = models.CharField(max_length=20, verbose_name=_('description'))
-    colour = models.CharField(max_length=10, default='Green', verbose_name=_('colour'))
+class QuotationBaseLabel(models.Model):
+    label_description = models.CharField(max_length=20, verbose_name=_('label description'))
+    label_colour = models.CharField(max_length=10, default='Green', verbose_name=_('label colour'))
 
     class Meta:
         abstract = True
-        verbose_name = _('Label description')
+        verbose_name = _('Quotation base label')
 
     def __str__(self) -> str:
-        return self.description
+        return self.label_description
 
 
-class Status(LabelDescription):
-    """Quotation status with colour labels."""
-
+class QuotationStatus(QuotationBaseLabel):
     class Meta:
-        verbose_name = _('Status')
-        verbose_name_plural = _('Statuses')
+        verbose_name = _('Quotation status')
+        verbose_name_plural = _('Quotation statuses')
 
 
-class Progress(LabelDescription):
-    """Quotation progress types."""
-
+class QuotationProgress(QuotationBaseLabel):
     class Meta:
-        verbose_name = _('Progress')
-        verbose_name_plural = _('Progress')
-
-
-def get_expiration_date() -> datetime:
-    """Return a default expiration date for a quotation."""
-    return datetime.today() + timedelta(days=30)
+        verbose_name = _('Quotation progress')
+        verbose_name_plural = _('Quotation progress')
 
 
 class Quotation(models.Model):
-    """Quotation details connections with status and relations."""
-
-    quotation_number = models.CharField(max_length=12, unique=True, blank=True, verbose_name=_('quotation number'))
-    relation = models.ForeignKey(Relation, on_delete=models.CASCADE, verbose_name=_('relation'))
-    status = models.ForeignKey(Status, null=False, blank=False, on_delete=models.CASCADE, verbose_name=_('status'))
-    progress_type = models.ForeignKey(Progress, on_delete=models.CASCADE, verbose_name=_('progress'))
-    date = models.DateField(default=date.today, verbose_name=_('date'))
-    expiration = models.DateField(default=get_expiration_date, verbose_name=_('expiration'))
-    note = models.CharField(max_length=250, blank=True, verbose_name=_('note'))
+    quote_number = models.CharField(max_length=12, unique=True, blank=True, verbose_name=_('quotation number'))
+    customer = models.ForeignKey(Relation, on_delete=models.CASCADE, verbose_name=_('customer'))
+    quote_status = models.ForeignKey(QuotationStatus, on_delete=models.CASCADE, verbose_name=_('quote status'))
+    quote_progress = models.ForeignKey(QuotationProgress, on_delete=models.CASCADE, verbose_name=_('quote progress'))
+    quote_date = models.DateField(default=date.today, verbose_name=_('quotation date'))
+    quote_expiration = models.DateField(
+        default=datetime.today() + timedelta(days=30),
+        verbose_name=_('quote expiration'),
+    )
+    quote_note = models.CharField(max_length=250, blank=True, verbose_name=_('quotation note'))
 
     class Meta:
         verbose_name = _('Quotation')
 
     def __str__(self) -> str:
-        return self.quotation_number
+        return self.quote_number
 
     def save(self, *args: object, **kwargs: object) -> None:
         """Create a quotation number based on: `YYYY-OF-INT` when saved."""
@@ -65,20 +56,24 @@ class Quotation(models.Model):
             year = str(self.date.year)
             prefix = f'{year}-OF-'
             self.quotation_number = f'{prefix}{self.pk:04d}'
-            super().save(update_fields=['quotation_number'])  # update on second save
+            super().save(update_fields=['quote_number'])  # update on second save
 
 
 class QuotationRule(models.Model):
-    """Quotation rules for the system."""
-
     quotation_rule = models.ForeignKey(Quotation, on_delete=models.CASCADE, verbose_name=_('quotation rule'))
-    amount = models.IntegerField(verbose_name=_('amount'))
-    description = models.CharField(max_length=50, verbose_name=_('description'))
-    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name=_('price'))
-    vat = models.DecimalField(max_digits=5, decimal_places=2, verbose_name=_('VAT'))
+    quotation_product = models.ForeignKey(
+        ProductItem,
+        on_delete=models.SET_NULL,
+        null=True, blank=True,
+        verbose_name=_('prefilled product'),
+    )
+    product_amount = models.IntegerField(verbose_name=_('product amount'))
+    product_description = models.CharField(max_length=50, verbose_name=_('product description'))
+    product_price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name=_('product price'))
+    product_vat = models.DecimalField(max_digits=5, decimal_places=2, verbose_name=_('product VAT'))
 
     class Meta:
         verbose_name = _('Quotation rule')
 
     def __str__(self) -> str:
-        return self.description
+        return self.product_description

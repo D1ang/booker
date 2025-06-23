@@ -1,16 +1,16 @@
-# Booker Dutch translation.
+# Finny Dutch translation.
 # Copyright (C) 2025 v1.0.0 Django Heimgartner
 # This file is distributed under the same license as the package.
 # Django Heimgartner d.heimgartner@tanooki.nl, 2025.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Booker 1.0.0\n"
-"Report-Msgid-Bugs-To: d.heimgartner@tanooki.nl\n"
-"POT-Creation-Date: 2025-06-06 21:05+0200\n"
+"Project-Id-Version: Finny 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-23 13:53+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Django Heimgartner <d.heimgartner@tanooki.nl>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: LANGUAGE <d.heimgartner@tanooki.nl>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,6 +18,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: config/admin.py:24
+msgid "Account"
+msgstr "Account"
+
+#: config/admin.py:25
 msgid "Classification"
 msgstr "Classificatie"
 
@@ -77,12 +81,11 @@ msgstr "BTW af te dragen hoog"
 msgid "Input tax"
 msgstr "Voorbelasting"
 
-#: config/models.py:44 relation/models.py:20
+#: config/models.py:44 relation/models.py:42
 msgid "code"
 msgstr "code"
 
-#: config/models.py:45 invoice/models.py:12 quotation/models.py:9
-#: quotation/models.py:68
+#: config/models.py:45 invoice/models.py:12 relation/models.py:8
 msgid "description"
 msgstr "omschrijving"
 
@@ -109,7 +112,8 @@ msgstr "grootboekrekeningen"
 #: config/models.py:79
 #, python-format
 msgid "The category \"%(category)s\" can only be assigned to one account."
-msgstr "De categorie \"%(category)s\" kan alleen aan één account toegewezen worden."
+msgstr ""
+"De categorie \"%(category)s\" kan alleen aan één account toegewezen worden."
 
 #: home/apps.py:8
 msgid "Home"
@@ -127,226 +131,306 @@ msgstr "factuurtekst"
 msgid "mutation description"
 msgstr "mutatie omschrijving"
 
-#: main/settings.py:106
+#: main/settings.py:108
 msgid "Dutch"
 msgstr "Nederlands"
 
-#: quotation/apps.py:8 quotation/models.py:48
+#: main/urls.py:7
+msgid "Finny - Administration"
+msgstr "Finny - administratie"
+
+#: product/admin.py:16
+msgid "product"
+msgstr "product"
+
+#: product/admin.py:20
+msgid "metadata"
+msgstr "metadata"
+
+#: product/apps.py:8
+msgid "Products"
+msgstr "Producten"
+
+#: product/models.py:7
+msgid "product title"
+msgstr "product titel"
+
+#: product/models.py:8 quotation/models.py:71
+msgid "product description"
+msgstr "product omschrijving"
+
+#: product/models.py:9 quotation/models.py:72
+msgid "product price"
+msgstr "product prijs"
+
+#: product/models.py:10
+msgid "product available"
+msgstr "product beschikbaar"
+
+#: product/models.py:12
+msgid "product added by"
+msgstr "product toegevoegd door"
+
+#: product/models.py:13
+msgid "product created at"
+msgstr "product aangemaakt op"
+
+#: product/models.py:14
+msgid "product updated at"
+msgstr "product update op"
+
+#: product/models.py:17
+msgid "Product item"
+msgstr "productartikel"
+
+#: product/models.py:18
+msgid "Product items"
+msgstr "productartikelen"
+
+#: quotation/apps.py:8 quotation/models.py:45
 msgid "Quotation"
 msgstr "Offerte"
 
+#: quotation/models.py:9
+msgid "label description"
+msgstr "label omschrijving"
+
 #: quotation/models.py:10
-msgid "colour"
-msgstr "kleur"
+msgid "label colour"
+msgstr "label kleur"
 
 #: quotation/models.py:14
-msgid "Label description"
-msgstr "Label omschrijving"
+msgid "Quotation base label"
+msgstr "Offerte basis label"
 
-#: quotation/models.py:24
-msgid "Status"
-msgstr "Status"
+#: quotation/models.py:22
+msgid "Quotation status"
+msgstr "Offerte status"
 
-#: quotation/models.py:25
-msgid "Statuses"
-msgstr "statussen"
+#: quotation/models.py:23
+msgid "Quotation statuses"
+msgstr "Offerte statussen"
 
-#: quotation/models.py:32 quotation/models.py:33
-msgid "Progress"
-msgstr "Voortgang"
+#: quotation/models.py:28 quotation/models.py:29
+msgid "Quotation progress"
+msgstr "Offerte voortgang"
 
-#: quotation/models.py:39
+#: quotation/models.py:33
 msgid "quotation number"
 msgstr "Offerte nummer"
 
-#: quotation/models.py:40
-msgid "relation"
-msgstr "relatie"
+#: quotation/models.py:34
+msgid "customer"
+msgstr "klant"
 
-#: quotation/models.py:41
-msgid "status"
-msgstr "status"
+#: quotation/models.py:35
+msgid "quote status"
+msgstr "offerte status"
+
+#: quotation/models.py:36
+msgid "quote progress"
+msgstr "offerte voortgang"
+
+#: quotation/models.py:37
+msgid "quotation date"
+msgstr "offerte datum"
+
+#: quotation/models.py:40
+msgid "quote expiration"
+msgstr "offerte vervaldatum"
 
 #: quotation/models.py:42
-msgid "progress"
-msgstr "Voortgang"
+msgid "quotation note"
+msgstr "offerte notitie"
 
-#: quotation/models.py:43
-msgid "date"
-msgstr "datum"
-
-#: quotation/models.py:44
-msgid "expiration"
-msgstr "vervaldatum"
-
-#: quotation/models.py:45 relation/models.py:54
-msgid "note"
-msgstr "notitie"
-
-#: quotation/models.py:66
+#: quotation/models.py:63
 msgid "quotation rule"
 msgstr "offerte regel"
 
-#: quotation/models.py:67
-msgid "amount"
-msgstr "hoeveelheid"
-
-#: quotation/models.py:69
-msgid "price"
-msgstr "prijs"
+#: quotation/models.py:68
+msgid "prefilled product"
+msgstr "vooringevuld product"
 
 #: quotation/models.py:70
-msgid "VAT"
-msgstr "BTW"
+msgid "product amount"
+msgstr "product aantal"
 
 #: quotation/models.py:73
+msgid "product VAT"
+msgstr "product BTW"
+
+#: quotation/models.py:76
 msgid "Quotation rule"
 msgstr "Offerte regel"
 
-#: relation/admin.py:17
+#: relation/admin.py:26
 msgid "Business address"
 msgstr "Vestigingsadres"
 
-#: relation/admin.py:23
+#: relation/admin.py:30
 msgid "Post address"
 msgstr "Postadres"
 
-#: relation/admin.py:29
+#: relation/admin.py:34
 msgid "Contact details"
 msgstr "Contactgegevens"
 
-#: relation/admin.py:35
+#: relation/admin.py:38
 msgid "Payment details"
 msgstr "Betaalgegevens"
 
-#: relation/apps.py:8 relation/models.py:10 relation/models.py:58
+#: relation/apps.py:8 relation/models.py:32 relation/models.py:80
 msgid "Relation"
 msgstr "Relatie"
 
 #: relation/models.py:9
+msgid "days"
+msgstr "dagen"
+
+#: relation/models.py:10
+msgid "footer"
+msgstr "footer"
+
+#: relation/models.py:11
+msgid "is default"
+msgstr "is standaard"
+
+#: relation/models.py:14
+msgid "Term of Payment"
+msgstr "Betalingstermijn"
+
+#: relation/models.py:15
+msgid "Terms of Payment"
+msgstr "Betalingstermijn"
+
+#: relation/models.py:31
 msgid "Company"
 msgstr "Bedrijf"
 
-#: relation/models.py:14
+#: relation/models.py:36
 msgid "Male"
 msgstr "Man"
 
-#: relation/models.py:15
+#: relation/models.py:37
 msgid "Female"
 msgstr "Vrouw"
 
-#: relation/models.py:16
+#: relation/models.py:38
 msgid "Department"
 msgstr "Afdeling"
 
-#: relation/models.py:19
+#: relation/models.py:41
 msgid "relation type"
 msgstr "relatietype"
 
-#: relation/models.py:21
+#: relation/models.py:43
 msgid "company"
 msgstr "bedrijf"
 
-#: relation/models.py:22
+#: relation/models.py:44
 msgid "company number"
 msgstr "kVK nummer"
 
-#: relation/models.py:23
+#: relation/models.py:45
 msgid "contact"
 msgstr "contactpersoon"
 
-#: relation/models.py:24
+#: relation/models.py:46
 msgid "gender"
 msgstr "geslacht"
 
-#: relation/models.py:25
+#: relation/models.py:47
 msgid "salutation"
 msgstr "aanhef"
 
-#: relation/models.py:28
+#: relation/models.py:50
 msgid "adress"
 msgstr "adres"
 
-#: relation/models.py:29
+#: relation/models.py:51
 msgid "postal"
 msgstr "postcode"
 
-#: relation/models.py:30
+#: relation/models.py:52
 msgid "city"
 msgstr "plaats"
 
-#: relation/models.py:31
+#: relation/models.py:53
 msgid "country"
 msgstr "land"
 
-#: relation/models.py:34
+#: relation/models.py:56
 msgid "post adress"
 msgstr "adres/postbus"
 
-#: relation/models.py:35
+#: relation/models.py:57
 msgid "post postal"
 msgstr "postcode"
 
-#: relation/models.py:36
+#: relation/models.py:58
 msgid "post city"
 msgstr "plaats"
 
-#: relation/models.py:37
+#: relation/models.py:59
 msgid "post country"
 msgstr "land"
 
-#: relation/models.py:40
+#: relation/models.py:62
 msgid "phone"
 msgstr "telefoon"
 
-#: relation/models.py:41
+#: relation/models.py:63
 msgid "mobile"
 msgstr "mobiel"
 
-#: relation/models.py:42
+#: relation/models.py:64
 msgid "mail"
 msgstr "e-mail"
 
-#: relation/models.py:43
+#: relation/models.py:65
 msgid "quotation mail"
 msgstr "facturen e-mail"
 
-#: relation/models.py:44
+#: relation/models.py:66
 msgid "reminders mail"
 msgstr "herinneringen e-mail"
 
-#: relation/models.py:45
+#: relation/models.py:67
 msgid "website"
 msgstr "website"
 
-#: relation/models.py:48
+#: relation/models.py:70
 msgid "iban"
 msgstr "iban"
 
-#: relation/models.py:49
+#: relation/models.py:71
 msgid "bic"
 msgstr "bic"
 
-#: relation/models.py:50
+#: relation/models.py:72
 msgid "vat"
 msgstr "BTW"
 
-#: relation/models.py:51
+#: relation/models.py:73
 msgid "kind"
 msgstr "soort"
 
-#: relation/models.py:52
+#: relation/models.py:74
 msgid "general ledger"
 msgstr "standaard grootboek rekening"
 
-#: relation/models.py:53
+#: relation/models.py:75
 msgid "term of payment"
 msgstr "betalingstermijn"
 
-#: relation/models.py:55
+#: relation/models.py:76
+msgid "note"
+msgstr "notitie"
+
+#: relation/models.py:77
 msgid "newsletters"
 msgstr "nieuwsbrief"
 
-#: relation/models.py:59
+#: relation/models.py:81
 msgid "Relations"
 msgstr "Relaties"
