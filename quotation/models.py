@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from colorfield.fields import ColorField
 from relation.models import Relation
 from product.models import ProductItem
 from datetime import datetime, timedelta, date
@@ -7,7 +8,7 @@ from datetime import datetime, timedelta, date
 
 class QuotationBaseLabel(models.Model):
     label_description = models.CharField(max_length=20, verbose_name=_('label description'))
-    label_colour = models.CharField(max_length=10, default='Green', verbose_name=_('label colour'))
+    label_color = ColorField(default='#008000', verbose_name=_('label color'))
 
     class Meta:
         abstract = True

@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "label_description": "Ingevoerd",
-            "label_colour": "Green"
+            "label_color": "#008000"
         }
     },
     {
@@ -12,7 +12,7 @@
         "pk": 2,
         "fields": {
             "label_description": "Verzonden",
-            "label_colour": "Green"
+            "label_color": "#008000"
         }
     },
     {
@@ -20,7 +20,7 @@
         "pk": 3,
         "fields": {
             "label_description": "Wacht op antwoord",
-            "label_colour": "Green"
+            "label_color": "#008000"
         }
     },
     {
@@ -28,7 +28,7 @@
         "pk": 4,
         "fields": {
             "label_description": "Geaccepteerd",
-            "label_colour": "Green"
+            "label_color": "#008000"
         }
     },
     {
@@ -36,7 +36,7 @@
         "pk": 5,
         "fields": {
             "label_description": "Gefactureerd",
-            "label_colour": "Green"
+            "label_color": "#008000"
         }
     },
     {
@@ -44,7 +44,7 @@
         "pk": 1,
         "fields": {
             "label_description": "Ingevoerd",
-            "label_colour": "Geel"
+            "label_color": "#ebe720"
         }
     },
     {
@@ -52,7 +52,7 @@
         "pk": 2,
         "fields": {
             "label_description": "E-mail ontvangen",
-            "label_colour": "Green"
+            "label_color": "#008000"
         }
     },
     {
@@ -60,7 +60,7 @@
         "pk": 3,
         "fields": {
             "label_description": "E-mail verzonden",
-            "label_colour": "Green"
+            "label_color": "#008000"
         }
     }
 ]

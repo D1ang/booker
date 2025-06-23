@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Finny 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-23 13:53+0200\n"
+"POT-Creation-Date: 2025-06-23 14:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Django Heimgartner <d.heimgartner@tanooki.nl>\n"
 "Language-Team: LANGUAGE <d.heimgartner@tanooki.nl>\n"
@@ -112,8 +112,7 @@ msgstr "grootboekrekeningen"
 #: config/models.py:79
 #, python-format
 msgid "The category \"%(category)s\" can only be assigned to one account."
-msgstr ""
-"De categorie \"%(category)s\" kan alleen aan één account toegewezen worden."
+msgstr "De categorie \"%(category)s\" kan alleen aan één account toegewezen worden."
 
 #: home/apps.py:8
 msgid "Home"
@@ -131,7 +130,7 @@ msgstr "factuurtekst"
 msgid "mutation description"
 msgstr "mutatie omschrijving"
 
-#: main/settings.py:108
+#: main/settings.py:109
 msgid "Dutch"
 msgstr "Nederlands"
 
@@ -155,11 +154,11 @@ msgstr "Producten"
 msgid "product title"
 msgstr "product titel"
 
-#: product/models.py:8 quotation/models.py:71
+#: product/models.py:8 quotation/models.py:72
 msgid "product description"
 msgstr "product omschrijving"
 
-#: product/models.py:9 quotation/models.py:72
+#: product/models.py:9 quotation/models.py:73
 msgid "product price"
 msgstr "product prijs"
 
@@ -187,79 +186,79 @@ msgstr "productartikel"
 msgid "Product items"
 msgstr "productartikelen"
 
-#: quotation/apps.py:8 quotation/models.py:45
+#: quotation/admin.py:18 quotation/models.py:11
+msgid "label color"
+msgstr "label kleur"
+
+#: quotation/apps.py:8 quotation/models.py:46
 msgid "Quotation"
 msgstr "Offerte"
 
-#: quotation/models.py:9
+#: quotation/models.py:10
 msgid "label description"
 msgstr "label omschrijving"
 
-#: quotation/models.py:10
-msgid "label colour"
-msgstr "label kleur"
-
-#: quotation/models.py:14
+#: quotation/models.py:15
 msgid "Quotation base label"
 msgstr "Offerte basis label"
 
-#: quotation/models.py:22
+#: quotation/models.py:23
 msgid "Quotation status"
 msgstr "Offerte status"
 
-#: quotation/models.py:23
+#: quotation/models.py:24
 msgid "Quotation statuses"
 msgstr "Offerte statussen"
 
-#: quotation/models.py:28 quotation/models.py:29
+#: quotation/models.py:29 quotation/models.py:30
 msgid "Quotation progress"
-msgstr "Offerte voortgang"
+msgstr "Offerte voortgangen"
 
-#: quotation/models.py:33
+#: quotation/models.py:34
 msgid "quotation number"
 msgstr "Offerte nummer"
 
-#: quotation/models.py:34
+#: quotation/models.py:35
 msgid "customer"
 msgstr "klant"
 
-#: quotation/models.py:35
+#: quotation/models.py:36
 msgid "quote status"
 msgstr "offerte status"
 
-#: quotation/models.py:36
+#: quotation/models.py:37
 msgid "quote progress"
 msgstr "offerte voortgang"
 
-#: quotation/models.py:37
+#: quotation/models.py:38
 msgid "quotation date"
 msgstr "offerte datum"
 
-#: quotation/models.py:40
+#: quotation/models.py:41
 msgid "quote expiration"
 msgstr "offerte vervaldatum"
 
-#: quotation/models.py:42
+#: quotation/models.py:43
 msgid "quotation note"
 msgstr "offerte notitie"
 
-#: quotation/models.py:63
+#: quotation/models.py:64
 msgid "quotation rule"
 msgstr "offerte regel"
 
-#: quotation/models.py:68
+#: quotation/models.py:69
 msgid "prefilled product"
 msgstr "vooringevuld product"
 
-#: quotation/models.py:70
+#: quotation/models.py:71
 msgid "product amount"
 msgstr "product aantal"
 
-#: quotation/models.py:73
+#: quotation/models.py:74
 msgid "product VAT"
 msgstr "product BTW"
 
-#: quotation/models.py:76
+#: quotation/models.py:77
 msgid "Quotation rule"
 msgstr "Offerte regel"
 

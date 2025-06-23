@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('label_description', models.CharField(max_length=20, verbose_name='label description')),
-                ('label_colour', models.CharField(default='Green', max_length=10, verbose_name='label colour')),
+                ('label_color', models.CharField(default='Green', max_length=10, verbose_name='label color')),
             ],
             options={
                 'verbose_name': 'Quotation progress',
@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('label_description', models.CharField(max_length=20, verbose_name='label description')),
-                ('label_colour', models.CharField(default='Green', max_length=10, verbose_name='label colour')),
+                ('label_color', models.CharField(default='Green', max_length=10, verbose_name='label color')),
             ],
             options={
                 'verbose_name': 'Quotation status',

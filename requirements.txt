@@ -1,6 +1,7 @@
 # django packages
 Django==5.2.*
 django-environ==0.12.*
+django-colorfield==0.14.*
 
 # production WSGI HTTP Server
 gunicorn==23.0.*
